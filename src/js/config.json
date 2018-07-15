@@ -1,0 +1,42 @@
+{
+   "projects": [
+      {
+         "name": "FlowChamp",
+         "time": {
+            "start": {
+               "quarter": "Spring",
+               "year": 2016
+            },
+            "end": {
+               "quarter": "Spring",
+               "year": "Present"
+            }
+         },
+         "shortDescription": "Frontend Developer",
+         "technologies": ["react", "redux", "sass", "python"],
+         "description": "This will be the long description",
+         "media": {
+            "tile": "images/tiles/flowchamp.svg"
+         }
+      },
+      {
+         "name": "FlowChamp 2.0",
+         "time": {
+            "start": {
+               "quarter": "Spring",
+               "year": 2016
+            },
+            "end": {
+               "quarter": "Spring",
+               "year": "Present"
+            }
+         },
+         "shortDescription": "Frontend Developer",
+         "technologies": ["php", "sass", "python"],
+         "description": "This will be the long description",
+         "media": {
+            "tile": "images/tiles/flowchamp.svg"
+         }
+      }
+   ]
+}

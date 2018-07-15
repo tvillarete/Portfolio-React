@@ -1,0 +1,40 @@
+<svg width="213" height="216" viewBox="0 0 213 216" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="logo_blue">
+<g id="Rectangle 4">
+<rect width="57" height="57" rx="8" transform="scale(3)" fill="#656565"/>
+</g>
+<g id="Rectangle 4.1">
+<rect width="57" height="57" rx="8" transform="translate(42 45) scale(3)" fill="#B9B9B9"/>
+</g>
+<g id="Rectangle 4.2" filter="url(#filter0_d)">
+<rect width="57" height="57" rx="8" transform="translate(21 21) scale(3)" fill="white"/>
+<rect x="1.5" y="1.5" width="54" height="54" rx="6.5" stroke-width="3" transform="translate(21 21) scale(3)" stroke="#2D9CDB"/>
+</g>
+<g id="Group">
+<g id="Rectangle 5">
+<rect width="27" height="10.7381" rx="5.36905" transform="translate(66 45) scale(3)" fill="#4F4F4F"/>
+</g>
+<g id="Rectangle 5.2">
+<rect width="21.2143" height="10.7381" rx="5.36905" transform="translate(66 94.7857) scale(3)" fill="#4F4F4F"/>
+</g>
+<g id="Rectangle 5.1">
+<rect width="41" height="10.6071" rx="5.30357" transform="matrix(0 -3 3 0 66 168)" fill="#4F4F4F"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" x="9" y="21" width="195" height="195" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+
+</defs>
+</svg>
+
