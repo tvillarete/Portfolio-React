@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import config from './config.json';
-import ProjectView from './views/project';
-import Tile from './components/tile';
 import Header from './components/header';
-import { Element } from 'react-scroll';
+import ProjectList from './components/projects';
+import Fade from 'react-reveal/Fade';
 
-const MainContainer = styled.div`
+const Container = styled.div`
    overflow: auto;
    max-width: 50em;
    margin: 0 auto;
@@ -30,141 +28,26 @@ const Gradient = styled.div`
    );
 `;
 
-const ProjectsContainer = styled.div`
-   min-height: 100vh;
-`;
-
-const TileSectionsContainer = styled.div`
-   display: flex;
-   flex-direction: column;
-   padding: 1em;
-`;
-
-const Section = styled.div`
-   display: flex;
-   flex-direction: column;
-   margin-top: 1em;
-`;
-
-const SectionHeader = styled.h1``;
-
-const TileContainer = styled.div`
-   display: flex;
-   flex: 1;
-   flex-wrap: wrap;
-`;
-
 export default class Portfolio extends Component {
    state = {
-      projectViewer: {
-         isOpen: false,
-      },
-   };
-
-   handleEvent = options => {
-      switch (options.type) {
-         case 'open-project':
-            this.openProject(options);
-            break;
-         case 'close-project':
-            this.closeProject();
-            break;
-         default:
-            console.log(options);
-      }
-   };
-
-   openProject(options) {
-      this.setState({
-         projectViewer: {
-            currentProject: options.name,
-            isOpen: true,
-         },
-      });
+      showProjects: false,
    }
 
-   closeProject() {
-      this.setState({
-         projectViewer: {
-            currentProject: null,
-            isOpen: false
-         }
-      });
+   componentDidMount() {
+      setTimeout(() => {
+         this.setState({ showProjects: true });
+      }, 700);
    }
-
-   getTiles = () => {
-      const { projects } = config;
-      const containers = [];
-      const currentYear = new Date().getFullYear();
-
-      for (let year = 2014; year <= currentYear; year++) {
-         containers.push({
-            year,
-            projects: [],
-         });
-      }
-
-      for (let item in projects) {
-         const project = projects[item];
-         const time =
-            project.time.end.year === 'Present'
-               ? currentYear
-               : project.time.end.year;
-
-         containers.forEach((container, index) => {
-            if (container.year === time) {
-               containers[index].projects.push(
-                  <Tile
-                     key={project.name}
-                     project={project}
-                     onClick={this.handleEvent}
-                  />,
-               );
-            }
-         });
-      }
-
-      return (
-         <TileSectionsContainer>
-            {containers.reverse().map(
-               (container, i) =>
-                  container.projects.length ? (
-                     <Section key={i}>
-                        <SectionHeader>
-                           {container.year === currentYear
-                              ? 'Ongoing'
-                              : container.year}
-                        </SectionHeader>
-                        <TileContainer key={i}>
-                           {container.projects.map((tile, j) => {
-                              return tile;
-                           })}
-                        </TileContainer>
-                     </Section>
-                  ) : null,
-            )}
-         </TileSectionsContainer>
-      );
-   };
 
    render() {
-      const { projectViewer, currentProject } = this.state;
-
       return (
-         <MainContainer>
-            <Header />
+         <Container>
             <Gradient />
-            <ProjectsContainer>
-               {this.getTiles()}
-            </ProjectsContainer>
-            <Element name="scroll-to-element" className="element">
-               <ProjectView
-                  isOpen={projectViewer.isOpen}
-                  currentProject={currentProject}
-                  onEvent={this.handleEvent}
-               />
-            </Element>
-         </MainContainer>
+            <Header />
+            <Fade when={this.state.showProjects}>
+            <ProjectList />
+            </Fade>
+         </Container>
       );
    }
 }

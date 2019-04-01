@@ -1,0 +1,64 @@
+{
+   "projects": [
+      {
+         "name": "Apple Music.js",
+         "start": {
+            "quarter": "Spring",
+            "year": 2016
+         },
+         "end": {
+            "quarter": "Spring",
+            "year": "Present"
+         },
+         "technologies": ["react", "redux", "sass", "python"],
+         "description": "iOS Music app built with JavaScript",
+         "image": "images/tiles/apple_music.svg",
+         "url": "http://tannerv.com/music"
+      },
+      {
+         "name": "FlowChamp",
+         "start": {
+            "quarter": "Spring",
+            "year": 2016
+         },
+         "end": {
+            "quarter": "Spring",
+            "year": "Present"
+         },
+         "technologies": ["php", "sass", "python"],
+         "description": "A college course planning web application",
+         "image": "images/tiles/flowchamp.svg",
+         "url": "https://flowchamp.org"
+      },
+      {
+         "name": "Playce",
+         "start": {
+            "quarter": "Spring",
+            "year": 2016
+         },
+         "end": {
+            "quarter": "Spring",
+            "year": "Present"
+         },
+         "technologies": ["php", "sass", "python"],
+         "description": "Find activities based on a dynamic questionnaire",
+         "image": "images/tiles/playce.svg",
+         "url": "http://tannerv.com/playce"
+      },
+      {
+         "name": "Milestone Planning Tool",
+         "start": {
+            "quarter": "Spring",
+            "year": 2016
+         },
+         "end": {
+            "quarter": "Spring",
+            "year": "Present"
+         },
+         "technologies": ["php", "sass", "python"],
+         "description": "Frontend for planning Agile sprints at iFixit",
+         "image": "images/tiles/ifixit.svg",
+         "url": "http://users.csc.calpoly.edu/~tvillare/Sprinter/"
+      }
+   ]
+}

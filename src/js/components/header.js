@@ -11,7 +11,6 @@ const breakpointSm = `@media screen and (max-width: 700px)`;
 
 const Container = styled.div`
    position: relative;
-   height: 100vh;
    width: 100%;
    display: flex;
    flex-direction: column;
@@ -116,48 +115,10 @@ const LinkImg = styled.img`
    }
 `;
 
-const ChevronContainer = styled.div`
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: center;
-   margin-bottom: 40px;
-   cursor: pointer;
-   animation: ${animation.fadeIn} 0.5s;
-
-   &:hover {
-      .chevron {
-         transform: translateY(10px);
-      }
-   }
-`;
-
-const ChevronLabel = styled.h3`
-   font-weight: 300;
-   color: ${color.gray[6]};
-   user-select: none;
-`;
-
-const Chevron = styled.img`
-   user-select: none;
-   pointer-events: none;
-   max-width: 48px;
-   transition: all 0.15s ease;
-`;
-
 export default class Header extends Component {
    state = {
       showHeader: false,
       showChevron: false,
-   }
-
-   scrollDown = () => {
-      scroller.scrollTo('scroll-to-element', {
-         duration: 800,
-         delay: 0,
-         smooth: 'easeInOut',
-      });
    };
 
    componentDidMount() {
@@ -195,7 +156,9 @@ export default class Header extends Component {
                      <A href="mailto:tvillarete@gmail.com" target="_blank">
                         <LinkImg src={`${path}/mail.svg`} />
                      </A>
-                     <A href="http://linkedin.com/in/tvillarete" target="_blank">
+                     <A
+                        href="http://linkedin.com/in/tvillarete"
+                        target="_blank">
                         <LinkImg src={`${path}/linkedin.svg`} />
                      </A>
                      <A href="tel:1-805-720-9663" target="_blank">
@@ -204,12 +167,6 @@ export default class Header extends Component {
                   </LinkContainer>
                </TextContainer>
             </Fade>
-            <Jump>
-               <ChevronContainer onClick={this.scrollDown}>
-                  <ChevronLabel>Projects</ChevronLabel>
-                  <Chevron className="chevron" src={`${path}/chevron-down.svg`} />
-               </ChevronContainer>
-            </Jump>
          </Container>
       );
    }
